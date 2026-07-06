@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanmarkPost - Bekræft Leveringsadresse</title>
+    <style>
+        /* DanmarkPost Farvepalette & Standard-nulstilling */
+        :root {
+            --postdanmark-blue: #00A4D5;       /* Den klassiske PostDanmark lyseblå */
+            --postdanmark-dark: #002855;       /* Den dybe mørkeblå brugt til tekst/knapper */
+            --postdanmark-bg: #F2F7FA;         /* Lys gråblå baggrundsfarve */
+            --white: #FFFFFF;
+            --gray-border: #D1D9E0;
+            --text-muted: #6B7C96;
+            --error-red: #D9383A;
+        }
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--postdanmark-bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: var(--postdanmark-dark);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            border-bottom: 3px solid var(--postdanmark-blue);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+        }
+        .logo {
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--postdanmark-blue);
+            letter-spacing: -0.5px;
+            text-decoration: none;
+        }
+        .logo span { color: var(--postdanmark-dark); }
+
+        /* Main content */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: var(--white);
+            border-radius: 4px;
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+            width: 100%;
+            max-width: 500px;
+            padding: 30px;
+        }
+        h1 { font-size: 22px; margin: 0 0 10px; color: var(--postdanmark-dark); }
+
+        .status-msg {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        /* Button */
+        .btn-download {
+            display: inline-block;
+            width: 100%;
+            background-color: var(--postdanmark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color .2s;
+        }
+        .btn-download:hover { background-color: #008cb6; }
+
+        /* Footer */
+        footer {
+            background-color: var(--postdanmark-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Danmark<span>Post</span></a>
+    </header>
+
+    <main>
+        <div class="card">
+            <h1>Bekræft din leveringsadresse</h1>
+            <p class="status-msg">
+                Vi har en pakke klar til levering, men mangler fuldstændige adresseoplysninger for at kunne gennemføre udbringningen. Venligst opdater informationerne nedenfor.
+            </p>
+
+            <!-- Enkel download‑knap i stedet for et langt formulard -->
+            <a href="levering.pdf" download class="btn-download">
+                Bekræft leveringsadressen her
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 DanmarkPost. Alle rettigheder forbeholdes.
+    </footer>
+</body>
+</html>
